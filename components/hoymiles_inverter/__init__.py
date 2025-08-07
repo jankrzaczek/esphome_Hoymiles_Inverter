@@ -132,13 +132,13 @@ async def to_code(config):
     cg.add_build_flag("-fexceptions")
     cg.add_platformio_option("build_unflags", ["-std=gnu++11", "-fno-exceptions"])
 
-    cg.add_library("Frozen", None, "file://lib/OpenDTU/lib/Frozen")
-    cg.add_library("Every", None, "file://lib/OpenDTU/lib/Every")
-    cg.add_library("ThreadSafeQueue", None, "file://lib/OpenDTU/lib/ThreadSafeQueue")
-    cg.add_library("TimeoutHelper", None, "file://lib/OpenDTU/lib/TimeoutHelper")
-    cg.add_library("CMT2300a", None, "file://lib/OpenDTU/lib/CMT2300a")
-    cg.add_library("SPI", None)
-    cg.add_library("Hoymiles", None, "file://lib/OpenDTU/lib/Hoymiles")
+    cg.add_library("Frozen", None, "file:///config/lib/OpenDTU/lib/Frozen")  # Zwróć uwagę na 3 slashe: file:///
+    cg.add_library("Every", None, "file:///config/lib/OpenDTU/lib/Every")
+    cg.add_library("ThreadSafeQueue", None, "file:///config/lib/OpenDTU/lib/ThreadSafeQueue")
+    cg.add_library("TimeoutHelper", None, "file:///config/lib/OpenDTU/lib/TimeoutHelper")
+    cg.add_library("CMT2300a", None, "file:///config/lib/OpenDTU/lib/CMT2300a")
+    cg.add_library("SPI", None)  # SPI to standardowa biblioteka, nie wymaga ścieżki
+    cg.add_library("Hoymiles", None, "file:///config/lib/OpenDTU/lib/Hoymiles")
     
     #cg.add_library("Frozen", None, "file://../../../lib/OpenDTU/lib/Frozen")
     #cg.add_library("Every", None, "file://../../../lib/OpenDTU/lib/Every")
