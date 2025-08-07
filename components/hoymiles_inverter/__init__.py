@@ -132,15 +132,13 @@ async def to_code(config):
     cg.add_build_flag("-fexceptions")
     cg.add_platformio_option("build_unflags", ["-std=gnu++11", "-fno-exceptions"])
 
-    base_url = "https://github.com/tbnobody/OpenDTU/raw/master/lib/"
-    
-    cg.add_library("Frozen", None, f"{base_url}Frozen")
-    cg.add_library("Every", None, f"{base_url}Every")
-    cg.add_library("ThreadSafeQueue", None, f"{base_url}ThreadSafeQueue")
-    cg.add_library("TimeoutHelper", None, f"{base_url}TimeoutHelper")
-    cg.add_library("CMT2300a", None, f"{base_url}CMT2300a")
+    cg.add_library("Frozen", None, "https://github.com/tbnobody/OpenDTU.git", "lib/Frozen")
+    cg.add_library("Every", None, "https://github.com/tbnobody/OpenDTU.git", "lib/Every")
+    cg.add_library("ThreadSafeQueue", None, "https://github.com/tbnobody/OpenDTU.git", "lib/ThreadSafeQueue")
+    cg.add_library("TimeoutHelper", None, "https://github.com/tbnobody/OpenDTU.git", "lib/TimeoutHelper")
+    cg.add_library("CMT2300a", None, "https://github.com/tbnobody/OpenDTU.git", "lib/CMT2300a")
     cg.add_library("SPI", None)  # Standardowa biblioteka Arduino
-    cg.add_library("Hoymiles", None, f"{base_url}Hoymiles")
+    cg.add_library("Hoymiles", None, "https://github.com/tbnobody/OpenDTU.git", "lib/Hoymiles")
     
     #cg.add_library("Frozen", None, "file://../../../lib/OpenDTU/lib/Frozen")
     #cg.add_library("Every", None, "file://../../../lib/OpenDTU/lib/Every")
